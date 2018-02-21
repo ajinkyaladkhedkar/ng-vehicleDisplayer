@@ -1,0 +1,18 @@
+<form name="vehicleentryform">
+  <h3>Vehicle Entry Form</h3>
+  <table class="table table-hover">
+    <thead>
+    <th>VIN</th>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+    </thead>
+    <tbody>
+    <td><input type="text" placeholder="VIN" [(ngModel)]="newvehicle.vin" name="vin" id="name" class="form-control"></td>
+    <td><input type="text" placeholder="Make" [(ngModel)]="newvehicle.make" name="make" id="make" class="form-control"></td>
+    <td><input type="text" placeholder="Model" [(ngModel)]="newvehicle.model" name="model" id="model" class="form-control"></td>
+    <td><input type="text" placeholder="Year" [(ngModel)]="newvehicle.year" name="year" id="year" class="form-control"></td>
+    </tbody>
+  </table>
+  <input type="button" value="Add" class="btn" (click)="addVehicle()">
+</form>
