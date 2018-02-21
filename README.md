@@ -1,6 +1,16 @@
 # NgVehicleDisplayer
 
-Tech Stack:
+# Requirements
+Node.js.
+Perform npm install
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+# Tech Stack:
 Angular CLI: 1.7.0
 Node: 8.9.4
 OS: win32 x64
@@ -19,12 +29,6 @@ Angular: 5.2.5
 @schematics/package-update: 0.3.1
 typescript: 2.5.3
 webpack: 3.11.0
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
