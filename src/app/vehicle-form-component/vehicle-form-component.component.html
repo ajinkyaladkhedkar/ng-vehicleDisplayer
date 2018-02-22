@@ -1,4 +1,4 @@
-<form name="vehicleentryform">
+<form name="vehicleentryform" #vehicleentryform="ngForm">
   <h3>Vehicle Entry Form</h3>
   <table class="table table-hover">
     <thead>
@@ -9,10 +9,18 @@
     </thead>
     <tbody>
     <td><input type="text" placeholder="VIN" [(ngModel)]="newvehicle.vin" name="vin" id="name" class="form-control"></td>
-    <td><input type="text" placeholder="Make" [(ngModel)]="newvehicle.make" name="make" id="make" class="form-control"></td>
+    <td> <! Form Validation: Exporting ngModel to local variable carmake and using its properties. Ref: https://angular.io/guide/form-validation>
+      <input type="text" #carmake="ngModel" placeholder="Make" [(ngModel)]="newvehicle.make" name="make" id="make" required minlength="2" ength="2" class="form-control">
+      <div *ngIf="carmake.errors && (carmake.dirty || carmake.touched)">
+        <p [hidden]="!carmake.errors.required">Name is required</p>
+        <p [hidden]="!carmake.errors.minlength">Min 2 chars required</p>
+      </div>
+    </td>
     <td><input type="text" placeholder="Model" [(ngModel)]="newvehicle.model" name="model" id="model" class="form-control"></td>
     <td><input type="text" placeholder="Year" [(ngModel)]="newvehicle.year" name="year" id="year" class="form-control"></td>
     </tbody>
   </table>
+  <p>
   <input type="button" value="Add" class="btn" (click)="addVehicle()">
+  </p>
 </form>
