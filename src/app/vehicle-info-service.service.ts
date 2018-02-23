@@ -23,7 +23,7 @@ export class VehicleInfoService {
       'lastServiceDate': '2017-03-25T17:31:25.268Z'
     }
   ];
-  getVehicleInfo(){
+  getVehicleInfo() {
   return this.vehicle;
   }
   addVehicleInfo(vehicleinfo) {

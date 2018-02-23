@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import {VehicleInfoService} from './vehicle-info-service.service';
 import { VehicleFormComponentComponent } from './vehicle-form-component/vehicle-form-component.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import {UserDetailsService} from './user-details.service';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [VehicleInfoService],   //Register Services at Application level scope
+  providers: [VehicleInfoService, UserDetailsService],   //Register Services at Application level scope
   bootstrap: [AppComponent]
 })
 export class AppModule { }
