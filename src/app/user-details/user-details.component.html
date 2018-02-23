@@ -1,0 +1,16 @@
+<h3>User details</h3>
+<table class="table table-hover">
+  <thead>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Email</th>
+  <th>Country</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{ user.firstName }}</td>
+    <td>{{ user.lastName }}</td>
+    <td> {{ user.email }}</td>
+    <td> {{ user.address.country }}</td>
+  </tr>
+  </tbody>
