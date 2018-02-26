@@ -9,6 +9,10 @@ import {UserDetailsService} from '../user-details.service';
 export class UserDetailsComponent {
   myusers;
   constructor(userDetailsService: UserDetailsService) {
-    this.myusers = userDetailsService.getUsers();
+    userDetailsService.getUsers()
+      .subscribe(
+        returnusers => this.myusers = returnusers,
+        error => console.log(error)
+        );
   }
 }
