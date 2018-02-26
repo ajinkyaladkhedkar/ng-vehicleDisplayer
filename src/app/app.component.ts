@@ -6,10 +6,6 @@ import {VehicleInfoService} from './vehicle-info-service.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent{
-  vehiclesinfo;
-  //Dependency Injection
-  constructor(vehicleInfoService: VehicleInfoService) {
-   this.vehiclesinfo = vehicleInfoService.getVehicleInfo();
-  }
+export class AppComponent {
+
 }

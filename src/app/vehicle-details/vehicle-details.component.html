@@ -1,0 +1,33 @@
+<h2> Car Details </h2>
+<table class="table table-hover">
+  <thead>
+  <th>Vin</th>
+  <th> Make</th>
+  <th> Model</th>
+  <th> Year</th>
+  <th> Redline Rpm</th>
+  <th> Max Fuel Volume</th>
+  <th> Last Service Date</th>
+  </thead>
+  <tbody *ngFor="let car of vehiclesinfo">           <! ngFor Directive>
+  <tr>
+    <td> {{car.vin}} </td>                    <! Angular Expressions>
+    <td> {{car.make}} </td>
+    <td> {{car.model}} </td>
+    <td> {{car.year}} </td>
+    <td> {{car.redlineRpm}}</td>
+    <td> {{car.maxFuelVolume}} </td>
+    <td> {{car.lastServiceDate}} </td>
+  </tr>
+  </tbody>
+</table>
+<h3>Warnings!</h3>
+<div *ngFor="let car of vehiclesinfo">
+  <div *ngIf="car.maxFuelVolume > 15; then displayVolume else displayWarning"> </div>     <! ngIf Directive>
+  <ng-template #displayVolume><div class="alert alert-success"> <strong> {{car.make}} {{car.year}} </strong> Volume level is <strong>{{car.maxFuelVolume}}</strong></div></ng-template><hr>
+  <ng-template #displayWarning><div class="alert alert-warning"><strong> {{car.make}} {{car.year}} Warning!</strong> Increase Fuel Tank Capacity for longer drive </div></ng-template>
+</div>
+
+<! Vehicle Component Added >
+<app-vehicle-form-component></app-vehicle-form-component>
+<app-user-details></app-user-details>
