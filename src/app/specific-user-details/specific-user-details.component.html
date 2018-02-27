@@ -8,7 +8,7 @@
   <li class="list-group-item">ZipCode: {{ myuser.address.zip }}</li>
   <li class="list-group-item">Country: {{ myuser.address.country }}</li>
   <li class="list-group-item">Company: <a [href]="myuser.company.website"> {{ myuser.company.name }}</a></li>
-  <li class="list-group-item">Date Created: {{ myuser.dateCreated }}</li>
+  <li class="list-group-item">Date Created: {{ myuser.dateCreated | date: 'medium'}}</li>
 </ul>
 <hr>
 <button type="button" class="btn btn-primary" [routerLink]="['/users']">Back to Home</button>

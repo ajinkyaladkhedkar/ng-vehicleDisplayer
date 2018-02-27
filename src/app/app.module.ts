@@ -34,7 +34,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)       // Importing RouterModule
+    RouterModule.forRoot(appRoutes, {useHash: true})       // Importing RouterModule
   ],
   providers: [VehicleInfoService, UserDetailsService],   // Register Services at Application level scope
   bootstrap: [AppComponent]
