@@ -1,4 +1,5 @@
-<h2> Car Details </h2>
+<div class="container">
+<h1> Car Details </h1><br>
 <table class="table table-hover">
   <thead>
   <th>Vin</th>
@@ -26,6 +27,8 @@
   <div *ngIf="car.maxFuelVolume > 15; then displayVolume else displayWarning"> </div>     <! ngIf Directive>
   <ng-template #displayVolume><div class="alert alert-success"> <strong> {{car.make}} {{car.year}} </strong> Volume level is <strong>{{car.maxFuelVolume}}</strong></div></ng-template><hr>
   <ng-template #displayWarning><div class="alert alert-warning"><strong> {{car.make}} {{car.year}} Warning!</strong> Increase Fuel Tank Capacity for longer drive </div></ng-template>
+</div>
+<button type="button" class="btn btn-primary" [routerLink]="['/home']">Back to Home</button>
 </div>
 
 
