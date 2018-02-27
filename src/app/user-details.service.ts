@@ -15,4 +15,10 @@ export class UserDetailsService {
     .map(response => response.json())
     .catch(error => Observable.throw(error.statusText));
   }
+  // Http Get Request to Mocker for Users
+  getUsersById(userId): Observable <any[]> {
+    return this.http.get(`http://mocker.egen.io/users/${userId}`)
+      .map(response => response.json())
+      .catch(error => Observable.throw(error.statusText));
+  }
 }

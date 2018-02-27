@@ -1,0 +1,14 @@
+<h1>User Specific details</h1>
+<ul class="list-group">
+  <li class="list-group-item"><img class='profile-pic' [src]="myuser.profilePic"></li>
+  <li class="list-group-item">First Name: {{ myuser.firstName }} </li>
+  <li class="list-group-item">Last Name: {{ myuser.lastName }}</li>
+  <li class="list-group-item">Email: {{ myuser.email }}</li>
+  <li class="list-group-item">Address: {{ myuser.address.street }}, {{ myuser.address.city }}, {{ myuser.address.state }}</li>
+  <li class="list-group-item">ZipCode: {{ myuser.address.zip }}</li>
+  <li class="list-group-item">Country: {{ myuser.address.country }}</li>
+  <li class="list-group-item">Company: <a [href]="myuser.company.website"> {{ myuser.company.name }}</a></li>
+  <li class="list-group-item">Date Created: {{ myuser.dateCreated }}</li>
+</ul>
+<hr>
+<button type="button" class="btn btn-primary" [routerLink]="['/users']">Back to Home</button>

@@ -11,8 +11,10 @@ import {UserDetailsService} from './user-details.service';
 import {RouterModule, Routes} from '@angular/router';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { HomeComponent } from './home/home.component';
+import { SpecificUserDetailsComponent } from './specific-user-details/specific-user-details.component';
 
 const appRoutes: Routes = [
+  { path: 'users/:id', component: SpecificUserDetailsComponent },
   { path: 'users', component: UserDetailsComponent },
   { path: 'addvehicle', component: VehicleFormComponentComponent },
   { path: 'vehicles', component: VehicleDetailsComponent },
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
     VehicleFormComponentComponent,
     UserDetailsComponent,
     VehicleDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    SpecificUserDetailsComponent
   ],
   imports: [
     BrowserModule,
