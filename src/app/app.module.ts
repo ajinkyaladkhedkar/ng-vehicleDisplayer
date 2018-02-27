@@ -10,12 +10,13 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import {UserDetailsService} from './user-details.service';
 import {RouterModule, Routes} from '@angular/router';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   { path: 'users', component: UserDetailsComponent },
   { path: 'addvehicle', component: VehicleFormComponentComponent },
   { path: 'vehicles', component: VehicleDetailsComponent },
-  { path: '**', redirectTo: '/vehicles', pathMatch: 'full' }
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     AppComponent,
     VehicleFormComponentComponent,
     UserDetailsComponent,
-    VehicleDetailsComponent
+    VehicleDetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
