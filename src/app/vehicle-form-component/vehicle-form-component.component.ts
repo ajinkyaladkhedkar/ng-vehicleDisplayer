@@ -6,7 +6,8 @@ import {VehicleInfoService} from '../vehicle-info-service.service';
   templateUrl: './vehicle-form-component.component.html',
   styleUrls: ['./vehicle-form-component.component.css']
 })
-export class VehicleFormComponentComponent{
+export class VehicleFormComponentComponent {
+
   newvehicle = {
     'vin': 'WP1AB29P63LA60171',
     'make': null,

@@ -6,13 +6,16 @@ import {UserDetailsService} from '../user-details.service';
   templateUrl: './user-details.component.html',
   styleUrls: ['./user-details.component.css']
 })
-export class UserDetailsComponent {
+export class UserDetailsComponent implements OnInit {
+
   myusers;
-  constructor(userDetailsService: UserDetailsService) {
-    userDetailsService.getUsers()
+  constructor(private userDetailsService: UserDetailsService) {
+  }
+  ngOnInit(): void {
+    this.userDetailsService.getUsers()
       .subscribe(
         returnusers => this.myusers = returnusers,
         error => console.log(error)
-        );
+      );
   }
 }
